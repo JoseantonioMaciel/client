@@ -14,7 +14,7 @@ import Description from "./description"
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345
+        maxWidth: 450
     },
     media: {
         height: 140
@@ -51,9 +51,9 @@ export default function MediaCard( ) {
   const classes = useStyles();
   const styles = useStyles();
   return (
-    <Box p={5}>
+   
+    <Box my={5}>
       <Description/>
-      <br/>
       <Grid className={styles.content}
         container
         justifyContent="space-around"
@@ -62,16 +62,19 @@ export default function MediaCard( ) {
         <Card className={classes.root}>
           <CardMedia style={{height: 0, paddingTop: '56.25%'}} image = {Image1}/>
           <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h4" component="div">
             {item.title} 
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body1" color="text.secondary">
             {item.description}
           </Typography>
           </CardContent>
         </Card>
         ))}
       </Grid>
+      <br/>
+      <br/>
+      <br/>
     </Box>
   );
 }

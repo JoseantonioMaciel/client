@@ -9,7 +9,7 @@ import Image from "./Hero.jpg";
 import Grow from "@mui/material/Grow";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-// Needed only if you need to added the social media information
+//Needed only if you need to added the social media information
 //import SendIcon from "@mui/icons-material/Send";
 //import Social from "./Social";
 //import Button from "@mui/material/Button";
