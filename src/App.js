@@ -12,7 +12,7 @@ function App() {
     <Header/>
     <Hero/>
     <MediaCard/>
-    
+    <Services/>
     </div>
   );
 }

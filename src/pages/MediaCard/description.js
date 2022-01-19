@@ -8,14 +8,14 @@ const Title = styled(Typography)(({ theme }) => ({
   ...theme.typography.h3,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.primary,
+  color: theme.palette.primary.contrastText,
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   ...theme.typography.h4,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.primary,
+  color: theme.palette.primary.contrastText,
 }));
 
 
@@ -23,7 +23,7 @@ const Description = styled(Typography)(({ theme }) => ({
 export default function BasicStack() {
   return (
     
-      <Box mb={6}>
+      <Box mb={6} ml={25}sx={{width: 1500,}}>
       <Stack spacing={6}>
         <Title>
           WE NEED A TITLE

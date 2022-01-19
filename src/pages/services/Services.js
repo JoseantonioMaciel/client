@@ -1,39 +1,224 @@
 import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import ButtonBase from '@mui/material/ButtonBase';
+import Typography from '@mui/material/Typography';
 
-export default function Services() {
-return (
-  <ImageList sx={{ width: 500, }}  cols={2}>
-    {itemData.map((item) => (
-      <ImageListItem key={item.img}>
-        <img
-          src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-          srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-          alt={item.title}
-          loading="lazy"
-        />
-      </ImageListItem>
-    ))}
-  </ImageList>
-);
+const images = [
+  {
+    url: '/static/images/buttons/breakfast.jpg',
+    title: 'Top',
+    width: '50%',
+  },
+  {
+    url: '/static/images/buttons/burgers.jpg',
+    title: 'Top',
+    width: '50%',
+  },
+];
+
+const images2 = [
+  {
+    url: '/static/images/buttons/breakfast.jpg',
+    title: 'Bottom',
+    width: '50%',
+  },
+  {
+    url: '/static/images/buttons/burgers.jpg',
+    title: 'Bottom',
+    width: '50%',
+  },
+];
+const images3 = [
+  {
+    url: '/Img1.png',
+    title: 'Subtitle',
+    width: '20%',
+  },
+  {
+    url: '/Img2.png',
+    title: 'Subtitle',
+    width: '20%',
+  },
+  {
+    url: '/Img3.png',
+    title: 'Subtitle',
+    width: '20%',
+  },
+  {
+    url: '/static/images/buttons/burgers.jpg',
+    title: 'Subtitle',
+    width: '20%',
+  },
+  {
+    url: '/static/images/buttons/breakfast.jpg',
+    title: 'Subtitle',
+    width: '20%',
+  },
+  
+];
+
+
+const ImageButton = styled(ButtonBase)(({ theme }) => ({
+  position: 'relative',
+  height: 200,
+  [theme.breakpoints.down('sm')]: {
+    width: '100% !important', // Overrides inline-style
+    height: 100,
+  },
+  '&:hover, &.Mui-focusVisible': {
+    zIndex: 1,
+    '& .MuiImageBackdrop-root': {
+      opacity: 0.15,
+    },
+    '& .MuiImageMarked-root': {
+      opacity: 0,
+    },
+    '& .MuiTypography-root': {
+      border: '4px solid currentColor',
+    },
+  },
+}));
+
+const ImageSrc = styled('span')({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center 40%',
+});
+
+const Image = styled('span')(({ theme }) => ({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: theme.palette.common.white,
+}));
+
+const ImageBackdrop = styled('span')(({ theme }) => ({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  backgroundColor: theme.palette.common.black,
+  opacity: 0.4,
+  transition: theme.transitions.create('opacity'),
+}));
+
+const ImageMarked = styled('span')(({ theme }) => ({
+  height: 3,
+  width: 18,
+  backgroundColor: theme.palette.common.white,
+  position: 'absolute',
+  bottom: -2,
+  left: 'calc(50% - 9px)',
+  transition: theme.transitions.create('opacity'),
+}));
+
+export default function ButtonBases() {
+  return (
+    <>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center' , width: '50%' }}>
+    {images.map((image) => (
+          <ImageButton
+            focusRipple
+            key={image.title}
+            style={{
+              width: image.width,
+            }}
+          >
+            <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+            <ImageBackdrop className="MuiImageBackdrop-root" />
+            <Image>
+              <Typography
+                component="span"
+                variant="subtitle1"
+                color="inherit"
+                sx={{
+                  position: 'relative',
+                  p: 4,
+                  pt: 2,
+                  pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                }}
+              >
+                {image.title}
+                <ImageMarked className="MuiImageMarked-root" />
+              </Typography>
+            </Image>
+          </ImageButton>
+        ))}
+    </Box>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '50%' }}>
+        {images2.map((image) => (
+          <ImageButton
+            focusRipple
+            key={image.title}
+            style={{
+              width: image.width,
+            }}
+          >
+            <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+            <ImageBackdrop className="MuiImageBackdrop-root" />
+            <Image>
+              <Typography
+                component="span"
+                variant="subtitle1"
+                color="inherit"
+                sx={{
+                  position: 'relative',
+                  p: 4,
+                  pt: 2,
+                  pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                }}
+              >
+                {image.title}
+                <ImageMarked className="MuiImageMarked-root" />
+              </Typography>
+            </Image>
+          </ImageButton>
+        ))}
+      </Box>
+
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+        {images3.map((image) => (
+          <ImageButton
+            focusRipple
+            key={image.title}
+            style={{
+              width: image.width,
+            }}
+          >
+            <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+            <ImageBackdrop className="MuiImageBackdrop-root" />
+            <Image>
+              <Typography
+                component="span"
+                variant="subtitle1"
+                color="inherit"
+                sx={{
+                  position: 'relative',
+                  p: 4,
+                  pt: 2,
+                  pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                }}
+              >
+                {image.title}
+                <ImageMarked className="MuiImageMarked-root" />
+              </Typography>
+            </Image>
+          </ImageButton>
+        ))}
+      </Box>
+      </>
+  );
 }
 
-const itemData = [
-{
-  img: "https://drive.google.com/uc?/export=view&id=1EsrfBj7t3nM_8iOE-Z-SwApaaI5SBVEB",
-  title: 'Breakfast',
-},
-{
-  img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-  title: 'Burger',
-},
-{
-  img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-  title: 'Camera',
-},
-{
-  img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-  title: 'Coffee',
-},
-];
+

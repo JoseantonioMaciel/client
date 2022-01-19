@@ -6,16 +6,19 @@ import Typography from '@mui/material/Typography';
 import { makeStyles } from "@mui/styles";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Image from "./001.jpg";
-import Image1 from "./001.jpg";
-import Image2 from "./001.jpg";
+import Image from "./image1.jpg";
+import Image1 from "./image1.jpg";
+import Image2 from "./image1.jpg";
 import Description from "./description"
+
 
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 450
+        maxWidth: 450,    
+        transition: "transform 0.15s ease-in-out"
     },
+
     media: {
         height: 140
     },
@@ -24,6 +27,14 @@ const useStyles = makeStyles({
       zIndex: 100,
       position: "relative"
   },
+  cardHovered: {
+    transform: "scale3d(1.05, 1.05, 1)"
+  },
+  palette:{
+    primary:{
+      main:"#323F4C"
+    }
+  }
 });
 const mediacards = [
   {
@@ -50,31 +61,35 @@ const mediacards = [
 export default function MediaCard( ) {
   const classes = useStyles();
   const styles = useStyles();
+  
   return (
-   
-    <Box my={5}>
+  
+    <Box  p={6} sx={{
+      boxShadow: 20,
+      backgroundColor: '#323F4C',
+      
+    }}>
       <Description/>
       <Grid className={styles.content}
         container
         justifyContent="space-around"
         alignItems="center">
       {mediacards.map((item) =>(
-        <Card className={classes.root}>
-          <CardMedia style={{height: 0, paddingTop: '56.25%'}} image = {Image1}/>
-          <CardContent>
-          <Typography gutterBottom variant="h4" component="div">
+        <Card className={classes.root}  elevation={0} >
+          <CardMedia  style={{height: 396,}} image = {Image1}/>
+          <CardContent  style={{ backgroundColor: '#323F4C', }} >
+          <Typography gutterBottom variant="h4" color="white" component="div">
             {item.title} 
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1" color="white"  >
             {item.description}
           </Typography>
-          </CardContent>
+          </CardContent >  
         </Card>
+        
         ))}
       </Grid>
-      <br/>
-      <br/>
-      <br/>
+    
     </Box>
   );
 }
