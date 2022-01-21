@@ -6,16 +6,16 @@ import Typography from '@mui/material/Typography';
 import { makeStyles } from "@mui/styles";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Image from "./image1.jpg";
-import Image1 from "./image1.jpg";
-import Image2 from "./image1.jpg";
+import Image from "./media1.jpg";
+import Image1 from "./media2.png";
+import Image2 from "./media3.png";
 import Description from "./description"
 
 
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 450,    
+        maxWidth: 396,    
         transition: "transform 0.15s ease-in-out"
     },
 
@@ -76,12 +76,12 @@ export default function MediaCard( ) {
         alignItems="center">
       {mediacards.map((item) =>(
         <Card className={classes.root}  elevation={0} >
-          <CardMedia  style={{height: 396,}} image = {Image1}/>
+          <CardMedia  style={{height: 396,}} image = {item.img}/>
           <CardContent  style={{ backgroundColor: '#323F4C', }} >
-          <Typography gutterBottom variant="h4" color="white" component="div">
+          <Typography gutterBottom variant="h5" color="white" component="div">
             {item.title} 
           </Typography>
-          <Typography variant="body1" color="white"  >
+          <Typography variant="body2" color="white"  >
             {item.description}
           </Typography>
           </CardContent >  

@@ -24,7 +24,7 @@ export default function Processinfo() {
   return (
     
       <Box mb={6} ml={25}sx={{width: 1500,}}>
-      <Stack spacing={6}>
+      <Stack spacing={5}>
         <Title>
           OUR PROCESS
         </Title>
