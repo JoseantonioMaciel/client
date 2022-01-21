@@ -3,55 +3,62 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
+import Image1 from "./Img1.png";
+import Image2 from "./Img2.png";
+import Image3 from "./Img3.png";
+import Image4 from "./Img4.jpg";
+import Image5 from "./Img5.jpg";
+import OurServices from './OurServices';
+import OtherServices from './OtherServices';
 
 const images = [
   {
-    url: '/static/images/buttons/breakfast.jpg',
-    title: 'Top',
+    url: Image1,
+    title: 'KITCHEN REMODEL',
     width: '50%',
   },
   {
-    url: '/static/images/buttons/burgers.jpg',
-    title: 'Top',
+    url: Image2,
+    title: 'NEW HOME',
     width: '50%',
   },
 ];
 
 const images2 = [
   {
-    url: '/static/images/buttons/breakfast.jpg',
-    title: 'Bottom',
+    url: Image3,
+    title: 'ADU',
     width: '50%',
   },
   {
-    url: '/static/images/buttons/burgers.jpg',
-    title: 'Bottom',
+    url: Image4,
+    title: 'ROOM ADDITION',
     width: '50%',
   },
 ];
 const images3 = [
   {
-    url: '/Img1.png',
+    url: Image5,
     title: 'Subtitle',
     width: '20%',
   },
   {
-    url: '/Img2.png',
+    url: Image5,
     title: 'Subtitle',
     width: '20%',
   },
   {
-    url: '/Img3.png',
+    url: Image5,
     title: 'Subtitle',
     width: '20%',
   },
   {
-    url: '/static/images/buttons/burgers.jpg',
+    url: Image5,
     title: 'Subtitle',
     width: '20%',
   },
   {
-    url: '/static/images/buttons/breakfast.jpg',
+    url: Image5,
     title: 'Subtitle',
     width: '20%',
   },
@@ -60,6 +67,26 @@ const images3 = [
 
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
+  position: 'relative',
+  height: 300,
+  [theme.breakpoints.down('sm')]: {
+    width: '100% !important', // Overrides inline-style
+    height: 100,
+  },
+  '&:hover, &.Mui-focusVisible': {
+    zIndex: 1,
+    '& .MuiImageBackdrop-root': {
+      opacity: 0.15,
+    },
+    '& .MuiImageMarked-root': {
+      opacity: 0,
+    },
+    '& .MuiTypography-root': {
+      border: '4px solid currentColor',
+    },
+  },
+}));
+const ImageButtonSmall = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
   height: 200,
   [theme.breakpoints.down('sm')]: {
@@ -126,7 +153,10 @@ const ImageMarked = styled('span')(({ theme }) => ({
 export default function ButtonBases() {
   return (
     <>
-    <Box sx={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center' , width: '50%' }}>
+    <Box m="auto"  >
+      <OurServices/>
+    </Box>
+    <Box m="auto"  sx={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center' , width: '50%' }}>
     {images.map((image) => (
           <ImageButton
             focusRipple
@@ -156,7 +186,7 @@ export default function ButtonBases() {
           </ImageButton>
         ))}
     </Box>
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '50%' }}>
+    <Box m="auto"  sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '50%' }}>
         {images2.map((image) => (
           <ImageButton
             focusRipple
@@ -186,10 +216,12 @@ export default function ButtonBases() {
           </ImageButton>
         ))}
       </Box>
-
-      <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+      <Box m="auto"  >
+        <OtherServices/>
+      </Box>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', }}>
         {images3.map((image) => (
-          <ImageButton
+          <ImageButtonSmall
             focusRipple
             key={image.title}
             style={{
@@ -214,7 +246,7 @@ export default function ButtonBases() {
                 <ImageMarked className="MuiImageMarked-root" />
               </Typography>
             </Image>
-          </ImageButton>
+          </ImageButtonSmall>
         ))}
       </Box>
       </>

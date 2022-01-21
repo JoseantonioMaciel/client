@@ -23,7 +23,7 @@ const Description = styled(Typography)(({ theme }) => ({
 export default function BasicStack() {
   return (
     
-      <Box mb={6} ml={25}sx={{width: 1500,}}>
+      <Box m="auto" >
       <Stack spacing={6}>
         <Title>
           WE NEED A TITLE
