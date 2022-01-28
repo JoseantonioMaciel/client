@@ -72,9 +72,10 @@ export default function ProcessCard( ) {
   
   return (
   
-    <Box  p={6} sx={{
+    <Box  sx={{
       boxShadow: 20,
       backgroundColor: '#B8C3CE',
+      height:950,
     }}>
       <Description/>
       <Grid className={styles.content}
@@ -82,13 +83,13 @@ export default function ProcessCard( ) {
         justifyContent="space-around"
         alignItems="center">
       {mediacards.map((item) =>(
-        <Card className={classes.root}  elevation={0} >
-          <CardMedia  style={{height: 293,}} image = {item.img}/>
-          <CardContent>
+        <Card className={classes.root}  p={3} >
+          <CardMedia  style={{height: 330,width:330, }} image = {item.img}/>
+          <CardContent style={{height: 200,}}>
           <Typography gutterBottom variant="h5" color="#003478" component="div">
             {item.title} 
           </Typography>
-          <Typography variant="body2"   >
+          <Typography variant="body1"   >
             {item.description}
           </Typography>
           </CardContent >  

@@ -26,7 +26,7 @@ function Footer(props) {
   return (
     <Box component="footer" sx={{ bgcolor: '#003478', py: 1 }}>
       <FooterBanner/>
-      <Divider  color ='white' variant="middle"  />
+      <Divider  color ='white' variant="middle" />
       <Container maxWidth="lg">
         <Typography variant="h6" align="center" gutterBottom>
           {title}
