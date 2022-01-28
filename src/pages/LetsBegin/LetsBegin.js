@@ -3,23 +3,31 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Box from "@mui/material/Box";
 import LETSBEGININFO from "./LetsBeginInfo"
+import { makeStyles } from "@mui/styles";
 
 
+const useStyles = makeStyles(theme => ({
+  color: {
+    backgroundColor: '#003478'
+    },
 
+}));
 
 
 
 
 export default function AddressForm() {
+  const classes = useStyles();
   return (
     <React.Fragment>
-      <Box m="auto"  p={2}  width={1700}  >
+      <Box m="auto"  p={4}  width={1700}  >
       <LETSBEGININFO/>
       </Box>
-      <Box m="auto" width={1400} height={400} >
-      <Grid container spacing={5}>
+      <Box m="auto" width={1400} height={600} >
+      <Grid container spacing={9}>
         <Grid item xs={12} sm={6}>
           <TextField
+          inputProps={{ className: classes.input }}
             required
             id="firstName"
             name="firstName"

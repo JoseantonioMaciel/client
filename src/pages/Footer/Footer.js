@@ -5,6 +5,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import FooterBanner from "./FooterBanner";
+import Divider from '@mui/material/Divider';
 
 function Copyright() {
   return (
@@ -23,8 +24,9 @@ function Footer(props) {
   const { description, title } = props;
 
   return (
-    <Box component="footer" sx={{ bgcolor: '#323F4C', py: 3 }}>
+    <Box component="footer" sx={{ bgcolor: '#003478', py: 1 }}>
       <FooterBanner/>
+      <Divider  color ='white' variant="middle"  />
       <Container maxWidth="lg">
         <Typography variant="h6" align="center" gutterBottom>
           {title}

@@ -8,6 +8,8 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
+
+
 const pages = ['Home', 'Services', 'Gallery', 'About UDS', 'Contact Us'];
 
 
@@ -22,7 +24,7 @@ const ResponsiveAppBar = () => {
     };
 
     return (
-      <AppBar position="static">
+      <AppBar position="static" sx={{ bgcolor: "#003478" }}> 
         <Toolbar >
         
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

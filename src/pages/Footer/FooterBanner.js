@@ -7,16 +7,17 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Social from "./Social";
-import Image from "./Logo.png";
+import Logo from "./Logo.png";
+
+
 
 const useStyles = makeStyles(theme => ({
-  background:{
-    backgroundImage: `url(${Image})`,
-  },
   color: {
-    backgroundColor: '#323F4C'
-    }
-
+    backgroundColor: '#003478'
+    },
+    logo: {
+      maxWidth: 400,
+    },
 }));
 
 
@@ -54,7 +55,7 @@ export default function BasicStack() {
     
     <div className={classes.color}>
       <Container maxWidth="xl" >
-        <Box sx={{ flexGrow: 1,backgroundColor: '#323F4C',p: 3}}>
+        <Box sx={{ flexGrow: 1,backgroundColor: '#003478',p: 3}}>
           <Grid container justifyContent="space-between">
             <UDS>
               <Stack spacing={0}>
@@ -86,9 +87,9 @@ export default function BasicStack() {
                 <Social direction="row"  />
               </Stack>
             </UDS>
-
+            
             <UDS>
-            <Title>the logo</Title>
+            <img src={Logo} alt="logo" className={classes.logo}  />
             </UDS>
           </Grid>
         </Box>
