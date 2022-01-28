@@ -5,9 +5,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Grid from "@mui/material/Grid";
 import { IconButton } from "@mui/material";
 import Link from "@mui/material/Link";
+import { grey } from '@mui/material/colors';
+
+
 
 const socialItems = [
-  { icon: InstagramIcon, url: "" },
+  { icon: InstagramIcon, url: "",color:"white" },
   { icon: PinterestIcon, url: "" },
   { icon: LinkedInIcon, url: "" }
 ];
@@ -18,8 +21,8 @@ return (
       {socialItems.map((item) => (
         <Grid item>
           <Link href={item.url}>
-            <IconButton>
-              <item.icon fontSize="large" />
+            <IconButton >
+              <item.icon fontSize="large"  sx={{ color: grey[50] }}  />
             </IconButton>
           </Link>
         </Grid>

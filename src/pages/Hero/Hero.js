@@ -5,16 +5,8 @@ import Typography from "@mui/material/Typography";
 import { Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Image from "./Hero.jpg";
-
 import Grow from "@mui/material/Grow";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-//Needed only if you need to added the social media information
-//import SendIcon from "@mui/icons-material/Send";
-//import Social from "./Social";
-//import Button from "@mui/material/Button";
-//import Box from "@mui/material/Box";
-//import Hidden from "@mui/material/Hidden";
 
 
 const useStyles = makeStyles((theme) => ({

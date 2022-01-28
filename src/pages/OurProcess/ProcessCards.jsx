@@ -74,7 +74,7 @@ export default function ProcessCard( ) {
   
     <Box  p={6} sx={{
       boxShadow: 20,
-      backgroundColor: '#323F4C',
+      backgroundColor: '#B8C3CE',
     }}>
       <Description/>
       <Grid className={styles.content}
@@ -84,11 +84,11 @@ export default function ProcessCard( ) {
       {mediacards.map((item) =>(
         <Card className={classes.root}  elevation={0} >
           <CardMedia  style={{height: 293,}} image = {item.img}/>
-          <CardContent  style={{ backgroundColor: '#323F4C', }} >
-          <Typography gutterBottom variant="h5" color="white" component="div">
+          <CardContent>
+          <Typography gutterBottom variant="h5" color="#003478" component="div">
             {item.title} 
           </Typography>
-          <Typography variant="body2" color="white"  >
+          <Typography variant="body2"   >
             {item.description}
           </Typography>
           </CardContent >  

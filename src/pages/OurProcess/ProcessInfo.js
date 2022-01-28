@@ -8,7 +8,7 @@ const Title = styled(Typography)(({ theme }) => ({
   ...theme.typography.h3,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.primary.contrastText,
+  
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
@@ -25,7 +25,7 @@ export default function Processinfo() {
     
       <Box m="auto" >
       <Stack spacing={5}>
-        <Title>
+        <Title color="#003478">
           OUR PROCESS
         </Title>
         <Description>

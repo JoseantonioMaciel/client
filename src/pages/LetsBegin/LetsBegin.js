@@ -4,10 +4,16 @@ import TextField from '@mui/material/TextField';
 import Box from "@mui/material/Box";
 import LETSBEGININFO from "./LetsBeginInfo"
 
+
+
+
+
+
+
 export default function AddressForm() {
   return (
     <React.Fragment>
-      <Box m="auto"  p={2}  width={1700}>
+      <Box m="auto"  p={2}  width={1700}  >
       <LETSBEGININFO/>
       </Box>
       <Box m="auto" width={1400} height={400} >
