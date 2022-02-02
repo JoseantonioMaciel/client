@@ -24,7 +24,7 @@ export default function BasicStack() {
   return (
     
       <Box m="auto" >
-      <Stack p={10} spacing={3}>
+      <Stack p={5} spacing={3}>
         <Title>
           WE NEED A TITLE
         </Title>
