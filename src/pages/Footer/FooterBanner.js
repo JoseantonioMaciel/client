@@ -56,7 +56,11 @@ export default function BasicStack() {
     <div className={classes.color}>
       <Container maxWidth="xl" >
         <Box sx={{ flexGrow: 1,backgroundColor: '#003478',p: 3}}>
-          <Grid container justifyContent="space-between">
+          <Grid 
+          container 
+          gap={4}
+          justifyContent="center"
+          alignItems="center">
             <UDS>
               <Stack spacing={0}>
                 <Title>Ultimate Drafting Services</Title>
