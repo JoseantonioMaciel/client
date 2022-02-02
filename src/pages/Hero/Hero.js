@@ -30,13 +30,14 @@ const theme = createTheme({
   typography: {
     h1: {
       fontSize: 100,
-      fontWeight: 25,
+      fontWeight: "bold",
       color: 'white',
+      textShadow: "",
     },
-    h2: {
-      fontSize: 80,
-      fontWeight: 5,
+    h4: {
+      fontSize: 40,
       color: 'white',
+      
     },
   },
 });
@@ -50,32 +51,31 @@ const [shouldShow, setShouldShow] = React.useState(false);
 useEffect(() => setShouldShow(true),[]);
 return (
     <Paper className={styles.section}>
-    
-    <Container className={styles.container} maxWidth="mg">
-        <Grid
-        className={styles.content}
-        container
-        justifyContent="flex-start"
-        alignItems="inherit"
-        >
-          <Grow
-              in={shouldShow}
-              style={{ transformOrigin: "0 0 0" }}
-              {...(shouldShow ? { timeout: 2000 } : {})}
+      <Container className={styles.container} maxWidth="mg">
+          <Grid
+          className={styles.content}
+          container
+          justifyContent="space-around"
+          alignItems="center"
           >
-              <Grid item sm={9}>
-                <ThemeProvider theme={theme}>
-                  <Typography variant="h1" >
-                      Ultimate Drafting Services
-                  </Typography>
-                  <Typography variant="h2">
-                      Optimum Design Solution
-                  </Typography>
-                </ThemeProvider>
-              </Grid>
-          </Grow>
-        </Grid>
-    </Container>
+            <Grow
+                in={shouldShow}
+                style={{ transformOrigin: "0 0 0" }}
+                {...(shouldShow ? { timeout: 2000 } : {})}
+            >
+                <Grid item sm={9}>
+                  <ThemeProvider theme={theme}>
+                    <Typography variant="h1" align="center" gutterBottom>
+                        Ultimate Drafting Services
+                    </Typography>
+                    <Typography variant="h4" align="center"  gutterBottom>
+                        Optimum Design Solution
+                    </Typography>
+                  </ThemeProvider>
+                </Grid>
+            </Grow>
+          </Grid>
+      </Container>
     </Paper>
 );
 }
