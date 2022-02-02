@@ -24,7 +24,7 @@ export default function Processinfo() {
   return (
     
       <Box m="auto" >
-      <Stack p={10} spacing={3}>
+      <Stack p={5} spacing={3}>
         <Title color="#003478" >
           OUR PROCESS
         </Title>
