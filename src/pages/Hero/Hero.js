@@ -32,12 +32,10 @@ const theme = createTheme({
       fontSize: 100,
       fontWeight: "bold",
       color: 'white',
-      textShadow: "",
     },
     h4: {
       fontSize: 40,
       color: 'white',
-      
     },
   },
 });
@@ -68,7 +66,7 @@ return (
                     <Typography variant="h1" align="center" gutterBottom>
                         Ultimate Drafting Services
                     </Typography>
-                    <Typography variant="h4" align="center"  gutterBottom>
+                    <Typography variant="h4" align="center" gutterBottom>
                         Optimum Design Solution
                     </Typography>
                   </ThemeProvider>

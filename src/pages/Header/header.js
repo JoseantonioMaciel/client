@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { makeStyles } from "@mui/styles";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,11 +8,18 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import logo from "./MLogo.png";
 
 
 
 const pages = ['Home', 'Services', 'Gallery', 'About UDS', 'Contact Us'];
 
+
+const useStyles = makeStyles({
+  logo: {
+    maxWidth: 200,
+  },
+});
 
 const ResponsiveAppBar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -22,6 +30,7 @@ const ResponsiveAppBar = () => {
     const handleCloseNavMenu = () => {
       setAnchorElNav(null);
     };
+    const classes = useStyles();
 
     return (
       <AppBar position="static" sx={{ bgcolor: "#003478" }}> 
@@ -69,17 +78,18 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-          Ultimate Drafting Services 
+          {/** Ultimate Drafting Services */}
           </Typography>
         
 
           {/** This is the main display */}
+          <img src={logo} alt="Logo" className={classes.logo} />
           <Typography 
             variant="h6" 
             component="div" 
             noWrap
             sx={{ flexGrow: 1,  display: { xs: 'none', md: 'flex' } }}>
-          Ultimate Drafting Services 
+          {/** Ultimate Drafting Services */}
           </Typography>
           {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>

@@ -36,6 +36,7 @@ const useStyles = makeStyles({
     }
   }
 });
+
 const mediacards = [
   {
       img: Image,
