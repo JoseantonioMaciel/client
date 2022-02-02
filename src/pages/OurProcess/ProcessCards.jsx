@@ -18,11 +18,11 @@ import Description from "./ProcessInfo"
 const useStyles = makeStyles({
     root: {
         maxWidth: 293,    
-        transition: "transform 0.15s ease-in-out"
     },
 
-    media: {
-        height: 140
+    box: {
+        height: 1222,
+        Width:  566.31, 
     },
     container: {
       height: "100%",
@@ -76,16 +76,18 @@ export default function ProcessCard( ) {
       boxShadow: 20,
       backgroundColor: '#B8C3CE',
       height:950,
+      
     }}>
       <Description/>
       <Grid className={styles.content}
         container
-        justifyContent="space-around"
+        gap={6}
+        justifyContent="center"
         alignItems="center">
       {mediacards.map((item) =>(
-        <Card className={classes.root}  p={3} >
-          <CardMedia  style={{height: 330,width:330, }} image = {item.img}/>
-          <CardContent style={{height: 200,}}>
+        <Card className={classes.root}>
+          <CardMedia  style={{height: 221.97,width:293, }} image = {item.img}/>
+          <CardContent style={{height: 150,}}>
           <Typography gutterBottom variant="h5" color="#003478" component="div">
             {item.title} 
           </Typography>

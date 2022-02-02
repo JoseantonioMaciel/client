@@ -6,14 +6,14 @@ import Box from "@mui/material/Box";
 
 const Title = styled(Typography)(({ theme }) => ({
   ...theme.typography.h3,
-  padding: theme.spacing(1),
+  padding: theme.spacing(0),
   textAlign: 'center',
   
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   ...theme.typography.h4,
-  padding: theme.spacing(1),
+  padding: theme.spacing(0),
   textAlign: 'center',
   color: theme.palette.primary.contrastText,
 }));
@@ -24,7 +24,7 @@ export default function Processinfo() {
   return (
     
       <Box m="auto" >
-      <Stack p={5} spacing={5}>
+      <Stack p={10} spacing={3}>
         <Title color="#003478" >
           OUR PROCESS
         </Title>

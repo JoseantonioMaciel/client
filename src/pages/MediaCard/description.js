@@ -6,14 +6,14 @@ import Box from "@mui/material/Box";
 
 const Title = styled(Typography)(({ theme }) => ({
   ...theme.typography.h3,
-  padding: theme.spacing(1),
+  padding: theme.spacing(0),
   textAlign: 'center',
   color: theme.palette.primary.contrastText,
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   ...theme.typography.h4,
-  padding: theme.spacing(1),
+  padding: theme.spacing(0),
   textAlign: 'center',
   color: theme.palette.primary.contrastText,
 }));
@@ -24,7 +24,7 @@ export default function BasicStack() {
   return (
     
       <Box m="auto" >
-      <Stack spacing={6}>
+      <Stack p={10} spacing={3}>
         <Title>
           WE NEED A TITLE
         </Title>

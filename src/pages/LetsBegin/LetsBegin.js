@@ -3,21 +3,14 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Box from "@mui/material/Box";
 import LETSBEGININFO from "./LetsBeginInfo"
-import { makeStyles } from "@mui/styles";
 
 
-const useStyles = makeStyles(theme => ({
-  color: {
-    backgroundColor: '#003478'
-    },
-
-}));
 
 
 
 
 export default function AddressForm() {
-  const classes = useStyles();
+  
   return (
     <React.Fragment>
       <Box m="auto"  p={4}  width={1700}  >
@@ -27,7 +20,6 @@ export default function AddressForm() {
       <Grid container spacing={9}>
         <Grid item xs={12} sm={6}>
           <TextField
-          inputProps={{ className: classes.input }}
             required
             id="firstName"
             name="firstName"
@@ -35,6 +27,8 @@ export default function AddressForm() {
             fullWidth
             autoComplete="given-name"
             variant="standard"
+            inputProps={{style: {fontSize: 20}}} // font size of input text
+             InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -46,6 +40,8 @@ export default function AddressForm() {
             fullWidth
             autoComplete="family-name"
             variant="standard"
+            inputProps={{style: {fontSize: 20}}} // font size of input text
+             InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
         <Grid item xs={6}>
@@ -57,6 +53,8 @@ export default function AddressForm() {
             fullWidth
             autoComplete="phone"
             variant="standard"
+            inputProps={{style: {fontSize: 20}}} // font size of input text
+             InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
         <Grid item xs={6}>
@@ -68,6 +66,8 @@ export default function AddressForm() {
             fullWidth
             autoComplete="email"
             variant="standard"
+            inputProps={{style: {fontSize: 20}}} // font size of input text
+             InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
         <Grid item xs={12}>
@@ -78,6 +78,8 @@ export default function AddressForm() {
             fullWidth
             autoComplete="shipping address-line1"
             variant="standard"
+            inputProps={{style: {fontSize: 20}}} // font size of input text
+             InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
         <Grid item xs={12} sm={4}>
@@ -89,6 +91,8 @@ export default function AddressForm() {
             fullWidth
             autoComplete="shipping address-level2"
             variant="standard"
+            inputProps={{style: {fontSize: 20}}} // font size of input text
+             InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
         <Grid item xs={12} sm={4}>
@@ -98,6 +102,8 @@ export default function AddressForm() {
             label="State/Province/Region"
             fullWidth
             variant="standard"
+            inputProps={{style: {fontSize: 20}}} // font size of input text
+             InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
         <Grid item xs={12} sm={4}>
@@ -109,6 +115,8 @@ export default function AddressForm() {
             fullWidth
             autoComplete="shipping postal-code"
             variant="standard"
+            inputProps={{style: {fontSize: 20}}} // font size of input text
+             InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
       </Grid>
