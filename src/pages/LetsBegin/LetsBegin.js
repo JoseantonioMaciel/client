@@ -13,7 +13,7 @@ export default function AddressForm() {
   
   return (
     <React.Fragment>
-      <Box m="auto"  p={4}  width={1700}  >
+      <Box m="auto"  p={4}  flexWrap= "wrap"  >
       <LETSBEGININFO/>
       </Box>
       <Box m="auto" width={1400} height={600} >
