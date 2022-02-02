@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#003478'
     },
     logo: {
-      maxWidth: 400,
+      maxWidth: 350,
     },
 }));
 
