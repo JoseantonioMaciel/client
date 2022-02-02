@@ -89,7 +89,9 @@ export default function BasicStack() {
             </UDS>
             
             <UDS>
-            <img src={Logo} alt="logo" className={classes.logo}  />
+            <Box sx={{ width: 'auto' }}>
+              <img src={Logo} alt="logo" className={classes.logo}  />
+            </Box>
             </UDS>
           </Grid>
         </Box>
