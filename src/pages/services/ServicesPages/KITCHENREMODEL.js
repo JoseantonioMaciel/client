@@ -6,10 +6,9 @@ import Typography from "@mui/material/Typography";
 import { Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Image from "./img1.jpg";
-
 import Card from "@mui/material/Card";
-import { OURKITCHENREMODEL, SCHEDUELEACONSULTATION, LETSBEGIN } from "./info";
-import { IMG } from "./info";
+import { OURKITCHENREMODEL, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesData/KITCHENREMODELINFO";
+import { IMG } from "../IMAGES/Ser1";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -45,7 +44,7 @@ export default function BoxSx() {
               gutterBotto
             >
               {/* The Typography */}
-              Ultimate Drafting Services
+              KITCHEN REMODEL
             </Typography>
           </Grid>
         </Grid>

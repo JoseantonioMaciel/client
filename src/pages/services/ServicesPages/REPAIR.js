@@ -8,8 +8,8 @@ import { makeStyles } from "@mui/styles";
 import Image from "./img1.jpg";
 
 import Card from "@mui/material/Card";
-import { OURKITCHENREMODEL, SCHEDUELEACONSULTATION, LETSBEGIN } from "./info";
-import { IMG } from "./info";
+import { OURREPAIR, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesData/REPAIRINFO";
+import { IMG } from "../IMAGES/Ser6";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -45,7 +45,7 @@ export default function BoxSx() {
               gutterBotto
             >
               {/* The Typography */}
-              Ultimate Drafting Services
+              REPAIR
             </Typography>
           </Grid>
         </Grid>
@@ -60,7 +60,7 @@ export default function BoxSx() {
           justify="center"
         >
           <Grid item xs={12}>
-            <Card elevation={0}>{OURKITCHENREMODEL}</Card>
+            <Card elevation={0}>{OURREPAIR}</Card>
           </Grid>
         </Grid>
         <br /> {/* Remove This*/}

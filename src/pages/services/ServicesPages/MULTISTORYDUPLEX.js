@@ -8,8 +8,8 @@ import { makeStyles } from "@mui/styles";
 import Image from "./img1.jpg";
 
 import Card from "@mui/material/Card";
-import { OURKITCHENREMODEL, SCHEDUELEACONSULTATION, LETSBEGIN } from "./info";
-import { IMG } from "./info";
+import { OURKITCHENREMODEL, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesData/MULTISTORYDUPLEXINFO";
+import { IMG } from "../IMAGES/Ser5";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -45,7 +45,7 @@ export default function BoxSx() {
               gutterBotto
             >
               {/* The Typography */}
-              Ultimate Drafting Services
+              MULTISTORY DUPLEX
             </Typography>
           </Grid>
         </Grid>
