@@ -156,7 +156,7 @@ export default function ButtonBases() {
     <Box m="auto"  >
       <OurServices/>
     </Box>
-    <Box m="auto"  sx={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center' , width: '50%' }}>
+    <Box m="auto"  sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '70%' }}>
     {images.map((image) => (
           <ImageButton
             focusRipple
@@ -170,7 +170,7 @@ export default function ButtonBases() {
             <Image>
               <Typography
                 component="span"
-                variant="subtitle1"
+                variant="h3"
                 color="inherit"
                 sx={{
                   position: 'relative',
@@ -186,7 +186,7 @@ export default function ButtonBases() {
           </ImageButton>
         ))}
     </Box>
-    <Box m="auto"  sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '50%' }}>
+    <Box m="auto"  sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '70%' }}>
         {images2.map((image) => (
           <ImageButton
             focusRipple
@@ -200,7 +200,7 @@ export default function ButtonBases() {
             <Image>
               <Typography
                 component="span"
-                variant="subtitle1"
+                variant="h3"
                 color="inherit"
                 sx={{
                   position: 'relative',
@@ -233,7 +233,7 @@ export default function ButtonBases() {
             <Image>
               <Typography
                 component="span"
-                variant="subtitle1"
+                variant="h3"
                 color="inherit"
                 sx={{
                   position: 'relative',

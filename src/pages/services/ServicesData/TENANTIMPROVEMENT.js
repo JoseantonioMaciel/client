@@ -101,5 +101,5 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </AppBar>
     );
-  };
+};
 export default ResponsiveAppBar;
