@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 
 const ResponsiveAppBar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-  
+    
     const handleOpenNavMenu = (event) => {
       setAnchorElNav(event.currentTarget);
     };
@@ -31,7 +31,6 @@ const ResponsiveAppBar = () => {
       setAnchorElNav(null);
     };
     const classes = useStyles();
-
     return (
       <AppBar position="static" sx={{ bgcolor: "#003478" }}> 
         <Toolbar >
