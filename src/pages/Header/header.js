@@ -79,8 +79,6 @@ const ResponsiveAppBar = () => {
           >
           {/** Ultimate Drafting Services */}
           </Typography>
-        
-
           {/** This is the main display */}
           <img src={logo} alt="Logo" className={classes.logo} />
           <Typography 
@@ -95,8 +93,6 @@ const ResponsiveAppBar = () => {
                   <Typography sx={{ display: { xs: 'none', md: 'flex' } }} >{page}</Typography>
                 </MenuItem>
               ))}
-          
-          
         </Toolbar>
       </AppBar>
     );
