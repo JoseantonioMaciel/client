@@ -4,10 +4,10 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
-import logo from "./sec1.jpg";
+import logo from "../IMAGES/sec1.jpg";
 import Box from "@mui/material/Box";
 
-export const OURROOMADDITION = (
+export const OURREPAIR = (
   <React.Fragment>
     <CardContent>
       <Box
@@ -25,7 +25,7 @@ export const OURROOMADDITION = (
         textTransform="uppercase"
         color="#003478"
       >
-        OUR ROOM ADDITION
+        OUR REPAIR
       </Typography>
       <Box
         component="span"

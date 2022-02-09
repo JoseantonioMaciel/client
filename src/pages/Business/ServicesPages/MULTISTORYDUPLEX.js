@@ -5,11 +5,11 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import Image from "./img1.jpg";
+import Image from "../IMAGES/sec1.jpg";
 
 import Card from "@mui/material/Card";
-import { OURREPAIR, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesData/REPAIRINFO";
-import { IMG } from "../IMAGES/Ser6";
+import { OUTMULTISTORYDUPLEX, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesData/MULTISTORYDUPLEXINFO";
+
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -45,7 +45,7 @@ export default function BoxSx() {
               gutterBotto
             >
               {/* The Typography */}
-              REPAIR
+              MULTISTORY DUPLEX
             </Typography>
           </Grid>
         </Grid>
@@ -60,13 +60,13 @@ export default function BoxSx() {
           justify="center"
         >
           <Grid item xs={12}>
-            <Card elevation={0}>{OURREPAIR}</Card>
+            <Card elevation={0}>{OUTMULTISTORYDUPLEX}</Card>
           </Grid>
         </Grid>
         <br /> {/* Remove This*/}
         <Grid container spacing={20} alignItems="center">
           <Grid item xs={6}>
-            <Card elevation={6}>{IMG}</Card>
+            <Card elevation={6}></Card>
           </Grid>
           <Grid item xs={6}>
             <Card elevation={0} sx={{ maxWidth: 700 }}>
