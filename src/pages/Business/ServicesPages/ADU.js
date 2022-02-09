@@ -7,8 +7,10 @@ import { Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Image from "../IMAGES/sec1.jpg";
 
+
 import Card from "@mui/material/Card";
 import { OURADU, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesData/ADUINFO";
+import Footer from "../../Footer/Footer";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -50,7 +52,7 @@ export default function BoxSx() {
           </Grid>
         </Grid>
       </Container>
-      <Box sx={{ flexGrow: 1 }}>
+      <Container sclassName={styles.container} maxWidth="mg">
         <br /> {/* Remove This*/}
         <Grid
           container
@@ -86,7 +88,9 @@ export default function BoxSx() {
             <Card elevation={0}>{LETSBEGIN}</Card>
           </Grid>
         </Grid>
-      </Box>
+      </Container>
+        <Footer/>
     </Paper>
+    
   );
 }
