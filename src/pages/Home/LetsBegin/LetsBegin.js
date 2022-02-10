@@ -82,7 +82,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} md={4}>
           <TextField
             required
             id="city"
@@ -95,7 +95,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} md={4}>
           <TextField
             id="state"
             name="state"
@@ -106,7 +106,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} md={4}>
           <TextField
             required
             id="zip"

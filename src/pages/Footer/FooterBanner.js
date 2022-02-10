@@ -43,18 +43,12 @@ const Body = styled(Typography)(({ theme }) => ({
   color: theme.palette.background.paper
 }));
 
-const UDS = styled(Grid)(({ theme }) => ({
-  padding: theme.spacing(0),
-  height: 300,
-  width: 250,
-}));
-
 export default function BasicStack() {
   const classes = useStyles();
   return (
     
     <div className={classes.color}>
-     <Container maxWidth = "1000">
+    <Container maxWidth = "1000">
         <Box sx={{ flexGrow: 1,backgroundColor: '#003478',p: 3}}>
           <Grid 
           container 
