@@ -7,12 +7,12 @@ import { Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Image from "./Ser1.jpg";
 import Card from "@mui/material/Card";
-import { OURKITCHENREMODEL, SCHEDUELEACONSULTATION, LETSBEGIN } from "./info";
-import { IMG } from "./info";
+import { TextTextText, SCHEDUELEACONSULTATION, LETSBEGIN,IMG } from "./ContactInfo";
+
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    height: "98vh",
+    height: "80vh",
     backgroundImage: `url(${Image})`,
     backgroundSize: "cover",
     backgroundPosition: "center"
@@ -44,28 +44,17 @@ export default function BoxSx() {
               gutterBotto
             >
               {/* The Typography */}
-              Ultimate Drafting Services
+              Contact Us
             </Typography>
           </Grid>
         </Grid>
       </Container>
       <Box sx={{ flexGrow: 1 }}>
         <br /> {/* Remove This*/}
-        <Grid
-          container
-          spacing={2}
-          direction="column"
-          alignItems="center"
-          justify="center"
-        >
-          <Grid item xs={12}>
-            <Card elevation={0}>{OURKITCHENREMODEL}</Card>
-          </Grid>
-        </Grid>
         <br /> {/* Remove This*/}
         <Grid container spacing={20} alignItems="center">
           <Grid item xs={6}>
-            <Card elevation={6}>{IMG}</Card>
+            <Card elevation={6}> {IMG} </Card>
           </Grid>
           <Grid item xs={6}>
             <Card elevation={0} sx={{ maxWidth: 700 }}>

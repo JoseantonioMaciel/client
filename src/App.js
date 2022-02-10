@@ -2,9 +2,9 @@
 import './App.css';
 import * as React from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
-import Footer from "./pages/Footer/Footer"
 import Main from "./pages/Home/Main"
 import { Button, Box, AppBar, Toolbar, Typography,} from '@mui/material';
+import Contactpage from "./pages/Contact/Contactus"
 import ADU from './pages/Business/ServicesPages/ADU';
 import ASBUILT from './pages/Business/ServicesPages/ASBUILT';
 import KITCHENREMODEL from './pages/Business/ServicesPages/KITCHENREMODEL';
@@ -25,7 +25,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
-          <Route path="gallery" element={<ONE />} />
+          <Route path="gallery" element={<Gallery />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoMatch />} />
@@ -45,7 +45,7 @@ function Layout() {
           logo
       </Typography>
       <Button color="inherit" href="/">Home</Button>
-      <Button color="inherit">Services</Button>
+      <Button color="inherit" href="/Services">Services</Button>
       <Button color="inherit" href="/gallery">Gallery</Button>
       <Button color="inherit" href="/about">About UDS</Button> 
       <Button color="inherit" href="/contact">Contact US</Button>
@@ -60,7 +60,6 @@ function Home() {
   return (
     <div>
       <Main/>
-      <Footer/>
     </div>
   );
 }
@@ -92,7 +91,7 @@ function About() {
 function Contact() {
   return (
     <div>
-      <h2>Contact</h2>
+      <Contactpage/>
     </div>
   );
 }
