@@ -3,6 +3,7 @@ import Hero from "./Hero/Hero"
 import MediaCard from "./MediaCard/MediaCard.jsx"
 import OurProcess from "./OurProcess/ProcessCards.jsx"
 import Services from "./services/Services"
+import LetsBegin from "./LetsBegin/LetsBegin"
 
 
 
@@ -13,6 +14,7 @@ export default function Main() {
   <MediaCard/>
   <OurProcess/>
   <Services/>
+  <LetsBegin/>
 </div>
 );
 }

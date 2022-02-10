@@ -54,14 +54,14 @@ export default function BasicStack() {
   return (
     
     <div className={classes.color}>
-      <Container maxWidth="xl" >
+     <Container maxWidth = "1000">
         <Box sx={{ flexGrow: 1,backgroundColor: '#003478',p: 3}}>
           <Grid 
           container 
           gap={4}
-          justifyContent="center"
-          alignItems="center">
-            <UDS>
+          justifyContent="space-evenly"
+          alignItems="flex-start">
+            <Grid xs={12} md={2}>
               <Stack spacing={0}>
                 <Title>Ultimate Drafting Services</Title>
                 <Header>Location</Header>
@@ -73,9 +73,9 @@ export default function BasicStack() {
                 <Header>E-mail</Header>
                 <Body>team@ultimatedraftingpro.com</Body>
               </Stack>
-            </UDS>
+            </Grid>
 
-            <UDS>
+            <Grid xs={12} md={2}>
               <Stack spacing={0}>
                 <Title>HOME</Title>
                 <Title>SERVICES</Title>
@@ -83,23 +83,23 @@ export default function BasicStack() {
                 <Title>ABOUT</Title>
                 <Title>CONTACT US</Title>
               </Stack>
-            </UDS>
+            </Grid>
 
-            <UDS>
+            <Grid xs={12} md={2}>
               <Stack spacing={0}>
                 <Title>Need fuel to kick start your creativity?</Title>
                 <Social direction="row"  />
               </Stack>
-            </UDS>
+            </Grid>
             
-            <UDS>
-            <Box sx={{ width: 'auto' }}>
-              <img src={Logo} alt="logo" className={classes.logo}  />
-            </Box>
-            </UDS>
+            <Grid xs={12} md={2}>
+              <Box sx={{ width: 'auto' }}>
+                <img src={Logo} alt="logo" className={classes.logo}  />
+              </Box>
+            </Grid>
           </Grid>
         </Box>
-      </Container>
+        </Container >
     </div>
   );
 }
