@@ -2,7 +2,7 @@ import * as React from 'react';
 import Hero from "./Hero/Hero"
 import MediaCard from "./MediaCard/MediaCard.jsx"
 import OurProcess from "./OurProcess/ProcessCards.jsx"
-import Services from "./Services/Services.js"
+import Services from "./services/Services"
 
 
 
