@@ -6,9 +6,12 @@ import Typography from "@mui/material/Typography";
 import { Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Image from "../IMAGES/sec1.jpg";
+import Footer from "../../Footer/Footer"
+
 
 import Card from "@mui/material/Card";
 import { OUTMULTISTORYDUPLEX, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesData/MULTISTORYDUPLEXINFO";
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -66,7 +69,7 @@ export default function BoxSx() {
         <br /> {/* Remove This*/}
         <Grid container spacing={20} alignItems="center">
           <Grid item xs={6}>
-            <Card elevation={6}></Card>
+            <Card elevation={6}> </Card>
           </Grid>
           <Grid item xs={6}>
             <Card elevation={0} sx={{ maxWidth: 700 }}>
@@ -87,6 +90,7 @@ export default function BoxSx() {
           </Grid>
         </Grid>
       </Box>
+      <Footer/>
     </Paper>
   );
 }
