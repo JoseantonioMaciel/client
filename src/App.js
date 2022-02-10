@@ -5,17 +5,7 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Main from "./pages/Home/Main"
 import { Button, Box, AppBar, Toolbar, Typography,} from '@mui/material';
 import Contactpage from "./pages/Contact/Contactus"
-import ADU from './pages/Business/ServicesPages/ADU';
-import ASBUILT from './pages/Business/ServicesPages/ASBUILT';
-import KITCHENREMODEL from './pages/Business/ServicesPages/KITCHENREMODEL';
-import MULTISTORYDUPLEX from './pages/Business/ServicesPages/MULTISTORYDUPLEX';
-import NEWHOME from './pages/Business/ServicesPages/NEWHOME';
-import PERMITSERVICES from './pages/Business/ServicesPages/PERMITSERVICES';
-import ADREPAIRU from './pages/Business/ServicesPages/REPAIR';
-import ROOMADITION from './pages/Business/ServicesPages/ROOMADITION';
-import TENANTIMPROVEMENT from './pages/Business/ServicesPages/TENANTIMPROVEMENT';
-
-
+import Gallerypage from "./pages/Gallery/Gallery"
 
 export default function App() {
   
@@ -74,7 +64,7 @@ function Services() {
 function Gallery() {
   return (
     <div>
-      <h2>Gallery</h2>
+      <Gallerypage/>
     </div>
   );
 }
@@ -96,58 +86,6 @@ function Contact() {
   );
 }
 
-
-function ONE() {
-  return (
-<ADU/>
-  );
-}
-
-function TWO() {
-  return (
-    <div>
-<ASBUILT/>
-    </div>
-    
-  );
-}
-
-function THREE() {
-  return (
-    <KITCHENREMODEL/>
-  );
-}
-
-function FOUR() {
-  return (
-    <MULTISTORYDUPLEX />
-  );
-}
-function FIVE() {
-  return (
-    <NEWHOME/>
-  );
-}
-function SIX() {
-  return (
-    <PERMITSERVICES/>
-  );
-}
-function SEVEN() {
-  return (
-    <ADREPAIRU/>
-  );
-}
-function EIGHT() {
-  return (
-    <ROOMADITION/>
-  );
-}
-function NICE() {
-  return (
-    <TENANTIMPROVEMENT/>
-  );
-}
 
 function NoMatch() {
   return (

@@ -7,7 +7,7 @@ import { Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Image from "./Ser1.jpg";
 import Card from "@mui/material/Card";
-import { TextTextText, SCHEDUELEACONSULTATION, LETSBEGIN,IMG } from "./ContactInfo";
+import {SCHEDUELEACONSULTATION, LETSBEGIN,IMG } from "./ContactInfo";
 
 
 const useStyles = makeStyles((theme) => ({
