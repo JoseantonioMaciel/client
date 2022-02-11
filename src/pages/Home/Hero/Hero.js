@@ -24,21 +24,24 @@ container: {
     zIndex: 100,
     position: "relative"
 },
+
+
+
+
 }));
 
-const theme = createTheme({
-  typography: {
-    h1: {
-      fontSize: 100,
-      fontWeight: "bold",
-      color: 'white',
-    },
-    h4: {
-      fontSize: 40,
-      color: 'white',
-    },
+let theme = createTheme();
+theme.typography.h1 = {
+  color: 'white',
+  fontSize: '1.2rem',
+  '@media (min-width:600px)': {
+    fontSize: '4.5rem',
   },
-});
+  [theme.breakpoints.up('xl')]: {
+    fontSize: '6.5rem',
+  },
+};
+
 
 
 
@@ -62,7 +65,7 @@ return (
                 {...(shouldShow ? { timeout: 2000 } : {})}
             >
                 <Grid item sm={9}>
-                  <ThemeProvider theme={theme}>
+                <ThemeProvider theme={theme}>
                     <Typography variant="h1" align="center" gutterBottom>
                         Ultimate Drafting Services
                     </Typography>
