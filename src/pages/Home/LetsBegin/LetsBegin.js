@@ -72,6 +72,7 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12}>
           <TextField
+            required
             id="address1"
             name="address1"
             label="Address"
@@ -97,6 +98,7 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12} md={4}>
           <TextField
+            required
             id="state"
             name="state"
             label="State/Province/Region"
