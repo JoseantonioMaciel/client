@@ -5,12 +5,10 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import Image from "../IMAGES/sec1.jpg";
+import Image from "../IMAGES/sec5.jpg";
 import Footer from "../../Footer/Footer"
-
-
 import Card from "@mui/material/Card";
-import { OUTMULTISTORYDUPLEX, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesData/MULTISTORYDUPLEXINFO";
+import { OUTMULTISTORYDUPLEX, SCHEDUELEACONSULTATION, LETSBEGIN , IMG} from "../ServicesData/MULTISTORYDUPLEXINFO";
 
 
 
@@ -69,7 +67,7 @@ export default function BoxSx() {
         <br /> {/* Remove This*/}
         <Grid container spacing={20} alignItems="center">
           <Grid item xs={6}>
-            <Card elevation={6}> </Card>
+            <Card elevation={6}>{IMG} </Card>
           </Grid>
           <Grid item xs={6}>
             <Card elevation={0} sx={{ maxWidth: 700 }}>

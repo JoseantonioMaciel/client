@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import Image from "../IMAGES/sec1.jpg";
+import Image from "../IMAGES/Ser4.jpg";
 
 import Card from "@mui/material/Card";
 import { OURROOMADDITION, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesData/ROOMADITIONINFO";
