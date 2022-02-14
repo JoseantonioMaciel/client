@@ -8,13 +8,13 @@ import Image from "../IMAGES/sec1.jpg";
 
 
 import Card from "@mui/material/Card";
-import { OURADU, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesData/ADUINFO";
+import { OURADU, SCHEDUELEACONSULTATION, LETSBEGIN ,IMG} from "../ServicesData/ADUINFO";
 import Footer from "../../Footer/Footer";
 
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    height: "98vh",
+    height: "80vh",
     backgroundImage: `url(${Image})`,
     backgroundSize: "cover",
     backgroundPosition: "center"

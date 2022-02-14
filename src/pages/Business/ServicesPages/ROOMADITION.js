@@ -13,7 +13,7 @@ import { OURROOMADDITION, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesD
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    height: "98vh",
+    height: "80vh",
     backgroundImage: `url(${Image})`,
     backgroundSize: "cover",
     backgroundPosition: "center"

@@ -44,7 +44,7 @@ export default function BasicGrid() {
               gutterBotto
             >
               {/* The Typography */}
-              Contact Us
+              Gallery
             </Typography>
           </Grid>
         </Grid>
