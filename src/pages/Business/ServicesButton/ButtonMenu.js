@@ -1,33 +1,16 @@
-
-import './App.css';
-import * as React from "react";
-import { Routes, Route, Outlet, Link } from "react-router-dom";
-import Main from "./pages/Home/Main"
-import { Button, Box, AppBar, Toolbar, Typography,} from '@mui/material';
+import * as React from 'react';
+import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Contactpage from "./pages/Contact/Contactus"
-import Gallerypage from "./pages/Gallery/Gallery"
 
 
-import ADUPAGE from './pages/Business/ServicesPages/ADU';
-import ASBUILTPAGE from './pages/Business/ServicesPages/ASBUILT';
-import KITCHENREMODELPAGE from './pages/Business/ServicesPages/KITCHENREMODEL';
-import MULTISTORYDUPLEXPAGE from './pages/Business/ServicesPages/MULTISTORYDUPLEX';
-import NEWHOMEPAGE from './pages/Business/ServicesPages/NEWHOME';
-import PERMITSERVICESPAGE from './pages/Business/ServicesPages/PERMITSERVICES';
-import ADREPAIRUPAGE from './pages/Business/ServicesPages/REPAIR';
-import ROOMADITIONPAGE from './pages/Business/ServicesPages/ROOMADITION';
-import TENANTIMPROVEMENTPAGE from './pages/Business/ServicesPages/TENANTIMPROVEMENT';
 
 export default function App() {
-  
   return (
     <div>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          {/** SERVICES */}
           <Route path="ADU" element={<ADU />} />
           <Route path="ASBUILT" element={<ASBUILT />} />
           <Route path="KITCHENREMODEL" element={<KITCHENREMODEL />} />
@@ -37,10 +20,6 @@ export default function App() {
           <Route path="ADREPAIRU" element={<ADREPAIRU />} />
           <Route path="ROOMADITION" element={<ROOMADITION />} />
           <Route path="TENANTIMPROVEMENT" element={<TENANTIMPROVEMENT />} />
-          {/** END SERVICES */}
-          <Route path="gallery" element={<Gallery />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
@@ -58,16 +37,8 @@ function Layout() {
     setAnchorEl(null);
   };
   return (
-    <Box sx={{ flexGrow: 1 }}> 
-      <AppBar position="static">
-      <Toolbar>
-      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          logo
-      </Typography>
-      <Button color="inherit" href="/">Home</Button>
-      
-      {/** SERVICE BUTTON  */}
-      <Button
+    <div>
+    <Button
       color="inherit"
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
@@ -77,8 +48,6 @@ function Layout() {
       >
         Dashboard
       </Button>
-       {/** SERVICE BUTTON END */}
-      {/** SERVICE MENU  */}
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
@@ -89,7 +58,7 @@ function Layout() {
         }}
       >
       <Link to="/ADU" style={{ textDecoration: 'none', display: 'block' }}>
-      <MenuItem onClick={handleClose} to="/ADU">ADU</MenuItem>
+      <MenuItem  to="/ADU">ADU</MenuItem>
       </Link>
       <Link to="/ASBUILT" style={{ textDecoration: 'none', display: 'block' }}>
       <MenuItem onClick={handleClose} href="/TWO">AS BUILT</MenuItem>
@@ -115,56 +84,17 @@ function Layout() {
       <Link to="/TENANTIMPROVEMENT" style={{ textDecoration: 'none', display: 'block' }}>
       <MenuItem onClick={handleClose} href="/NINE">TENANT IMPROVEMENT</MenuItem> 
       </Link>
-      </Menu> 
-      {/** SERVICE MENU END */}
-      <Button color="inherit" href="/gallery">Gallery</Button>
-      <Button color="inherit" href="/about">About UDS</Button> 
-      <Button color="inherit" href="/contact">Contact US</Button>
-      </Toolbar>
-      </AppBar>
+      </Menu>
       <Outlet />
-    </Box>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <Main/>
     </div>
   );
 }
 
-function Gallery() {
-  return (
-    <div>
-      <Gallerypage/>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-
-function Contact() {
-  return (
-    <div>
-      <Contactpage/>
-    </div>
-  );
-}
-// START OF SERVICES 
 
 function ADU() {
   return (
     <div>
-      <ADUPAGE/>
+      <h2>ADU</h2>
     </div>
   );
 }
@@ -172,7 +102,7 @@ function ADU() {
 function ASBUILT() {
   return (
     <div>
-      <ASBUILTPAGE/>
+      <h2>ASBUILT</h2>
     </div>
   );
 }
@@ -180,7 +110,7 @@ function ASBUILT() {
 function KITCHENREMODEL() {
   return (
     <div>
-      <KITCHENREMODELPAGE/>
+      <h2>KITCHENREMODEL</h2>
     </div>
   );
 }
@@ -188,7 +118,7 @@ function KITCHENREMODEL() {
 function MULTISTORYDUPLEX() {
   return (
     <div>
-      <MULTISTORYDUPLEXPAGE/>
+      <h2>MULTISTORYDUPLEX</h2>
     </div>
   );
 }
@@ -196,14 +126,14 @@ function MULTISTORYDUPLEX() {
 function NEWHOME() {
   return (
     <div>
-      <NEWHOMEPAGE/>
+      <h2>NEWHOME</h2>
     </div>
   );
 }
 function PERMITSERVICES() {
   return (
     <div>
-      <PERMITSERVICESPAGE/>
+      <h2>PERMITSERVICES</h2>
     </div>
   );
 }
@@ -211,7 +141,7 @@ function PERMITSERVICES() {
 function ADREPAIRU() {
   return (
     <div>
-      <ADREPAIRUPAGE/>
+      <h2>ADREPAIRU</h2>
     </div>
   );
 }
@@ -219,7 +149,7 @@ function ADREPAIRU() {
 function ROOMADITION() {
   return (
     <div>
-      <ROOMADITIONPAGE/>
+      <h2>ROOMADITION</h2>
     </div>
   );
 }
@@ -227,10 +157,11 @@ function ROOMADITION() {
 function TENANTIMPROVEMENT() {
   return (
     <div>
-      <TENANTIMPROVEMENTPAGE/>
+      <h2>TENANTIMPROVEMENT</h2>
     </div>
   );
-}// END OF SERVICES
+}
+
 function NoMatch() {
   return (
     <div>
