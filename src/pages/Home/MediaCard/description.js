@@ -3,19 +3,60 @@ import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import { Typography } from '@mui/material';
 import Box from "@mui/material/Box";
+import { red, green, blue, pink, yellow } from '@mui/material/colors';
 
 const Title = styled(Typography)(({ theme }) => ({
-  ...theme.typography.h3,
-  padding: theme.spacing(0),
-  textAlign: 'center',
-  color: theme.palette.primary.contrastText,
+  color: 'white',
+  textAlign: 'center' ,
+  Typography: theme.spacing(1),
+  [theme.breakpoints.up('xs')]: {
+    backgroundColor: yellow[500],
+    fontSize: 16,
+    
+  },
+  [theme.breakpoints.up('sm')]: {
+    backgroundColor: pink[500],
+    fontSize: 20,
+  },
+  [theme.breakpoints.up('md')]: {
+    backgroundColor: red[500],
+    fontSize: 24,
+  },
+  [theme.breakpoints.up('lg')]: {
+    backgroundColor: blue[500],
+    fontSize: 34,
+  },
+  [theme.breakpoints.up('xl')]: {
+    backgroundColor: green[500],
+    fontSize: 48,
+  },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
-  ...theme.typography.h4,
-  padding: theme.spacing(0),
-  textAlign: 'center',
-  color: theme.palette.primary.contrastText,
+  color: 'white',
+  textAlign: 'center' ,
+  Typography: theme.spacing(1),
+  [theme.breakpoints.up('xs')]: {
+    backgroundColor: yellow[500],
+    fontSize: 14,
+    
+  },
+  [theme.breakpoints.up('sm')]: {
+    backgroundColor: pink[500],
+    fontSize: 16,
+  },
+  [theme.breakpoints.up('md')]: {
+    backgroundColor: red[500],
+    fontSize: 20,
+  },
+  [theme.breakpoints.up('lg')]: {
+    backgroundColor: blue[500],
+    fontSize: 24,
+  },
+  [theme.breakpoints.up('xl')]: {
+    backgroundColor: green[500],
+    fontSize: 34,
+  },
 }));
 
 
