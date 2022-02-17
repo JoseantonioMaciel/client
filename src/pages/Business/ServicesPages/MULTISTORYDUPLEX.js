@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Paper } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import Image from "../IMAGES/sec5.jpg";
+import Image from "../IMAGES/Ser5.jpg";
 import Footer from "../../Footer/Footer"
 import Card from "@mui/material/Card";
 import { OUTMULTISTORYDUPLEX, SCHEDUELEACONSULTATION, LETSBEGIN , IMG} from "../ServicesData/MULTISTORYDUPLEXINFO";

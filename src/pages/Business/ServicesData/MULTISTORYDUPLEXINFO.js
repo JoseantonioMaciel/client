@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
-import logo from "../IMAGES/sec1.jpg";
+import logo from "../IMAGES/sec5.jpg";
 import Box from "@mui/material/Box";
 
 export const OUTMULTISTORYDUPLEX = (

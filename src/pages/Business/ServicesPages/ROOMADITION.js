@@ -8,7 +8,7 @@ import { makeStyles } from "@mui/styles";
 import Image from "../IMAGES/Ser4.jpg";
 
 import Card from "@mui/material/Card";
-import { OURROOMADDITION, SCHEDUELEACONSULTATION, LETSBEGIN } from "../ServicesData/ROOMADITIONINFO";
+import { OURROOMADDITION, SCHEDUELEACONSULTATION, LETSBEGIN, IMG } from "../ServicesData/ROOMADITIONINFO";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -66,7 +66,7 @@ export default function BoxSx() {
         <br /> {/* Remove This*/}
         <Grid container spacing={20} alignItems="center">
           <Grid item xs={6}>
-            <Card elevation={6}></Card>
+            <Card elevation={6}>{IMG}</Card>
           </Grid>
           <Grid item xs={6}>
             <Card elevation={0} sx={{ maxWidth: 700 }}>

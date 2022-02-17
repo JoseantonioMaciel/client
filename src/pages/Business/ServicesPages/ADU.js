@@ -67,7 +67,7 @@ export default function BoxSx() {
         <br /> {/* Remove This*/}
         <Grid container spacing={20} alignItems="center">
           <Grid item xs={6}>
-            <Card elevation={6}></Card>
+            <Card elevation={6}>{IMG}</Card>
           </Grid>
           <Grid item xs={6}>
             <Card elevation={0} sx={{ maxWidth: 700 }}>
