@@ -18,7 +18,7 @@ export default function AddressForm() {
       </Box>
       <Box m="auto" width={1400} height={600} >
       <Grid container spacing={9}>
-        <Grid item xs={12} sm={6}>
+        <Grid item sm={12} lg={6}>
           <TextField
             required
             id="firstName"
@@ -31,7 +31,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item sm={12} lg={6}>
           <TextField
             required
             id="lastName"
@@ -44,7 +44,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item sm={12} lg={6}>
           <TextField
             required
             id="Phone"
@@ -57,7 +57,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item sm={12} lg={6}>
           <TextField
             required
             id="EmailAddress"
@@ -70,7 +70,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item sm={12}>
           <TextField
             required
             id="address1"
@@ -83,7 +83,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item sm={12} lg={4}>
           <TextField
             required
             id="city"
@@ -96,7 +96,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item sm={12} lg={4}>
           <TextField
             required
             id="state"
@@ -108,7 +108,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item sm={12} lg={4}>
           <TextField
             required
             id="zip"
