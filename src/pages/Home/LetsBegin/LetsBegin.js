@@ -1,9 +1,13 @@
 import * as React from 'react';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
 import Box from "@mui/material/Box";
 import LETSBEGININFO from "./LetsBeginInfo"
-
+import TextField from '@mui/material/TextField';
+import Container from '@mui/material/Container';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 
 
 
@@ -16,9 +20,14 @@ export default function AddressForm() {
       <Box m="auto"  p={4}  flexWrap= "wrap"  >
       <LETSBEGININFO/>
       </Box>
-      <Box m="auto" width={1400} height={600} >
+      <Box m="auto" >
+      <Container maxWidth="lg"> 
+    
+    
+    <Card sx={{ Width: 275 }}>
+      <CardContent>
       <Grid container spacing={9}>
-        <Grid item sm={12} lg={6}>
+        <Grid item xs={12} lg={6}>
           <TextField
             required
             id="firstName"
@@ -31,7 +40,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item sm={12} lg={6}>
+        <Grid item xs={12} lg={6} >
           <TextField
             required
             id="lastName"
@@ -44,7 +53,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item sm={12} lg={6}>
+        <Grid item xs={12} lg={6} >
           <TextField
             required
             id="Phone"
@@ -57,7 +66,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item sm={12} lg={6}>
+        <Grid item  xs={12} lg={6}  >
           <TextField
             required
             id="EmailAddress"
@@ -70,7 +79,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item sm={12}>
+        <Grid item xs={12}  lg={4} >
           <TextField
             required
             id="address1"
@@ -83,7 +92,7 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item sm={12} lg={4}>
+        <Grid item xs={12} lg={4}>
           <TextField
             required
             id="city"
@@ -96,19 +105,19 @@ export default function AddressForm() {
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item sm={12} lg={4}>
+        <Grid item xs={12} lg={2} >
           <TextField
             required
             id="state"
             name="state"
-            label="State/Province/Region"
+            label="State"
             fullWidth
             variant="standard"
             inputProps={{style: {fontSize: 20}}} // font size of input text
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
           />
         </Grid>
-        <Grid item sm={12} lg={4}>
+        <Grid item  xs={12} lg={2}>
           <TextField
             required
             id="zip"
@@ -122,6 +131,12 @@ export default function AddressForm() {
           />
         </Grid>
       </Grid>
+      </CardContent>
+      <CardActions>
+        <Button size="large">Submit</Button>
+      </CardActions>
+    </Card>
+    </Container>
       </Box>
     </React.Fragment>
 );

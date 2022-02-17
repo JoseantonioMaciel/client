@@ -75,8 +75,6 @@ export default function ProcessCard( ) {
     <Box  sx={{
       boxShadow: 20,
       backgroundColor: '#B8C3CE',
-      height:950,
-      
     }}>
       <Description/>
       <Grid className={styles.content}
