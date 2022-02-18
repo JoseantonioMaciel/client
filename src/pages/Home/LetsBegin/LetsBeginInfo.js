@@ -11,7 +11,7 @@ const Title = styled(Typography)(({ theme }) => ({
   Typography: theme.spacing(1),
   [theme.breakpoints.up('xs')]: {
     backgroundColor: yellow[500],
-    fontSize: 16,
+    fontSize: 20,
     
   },
   [theme.breakpoints.up('sm')]: {
@@ -34,11 +34,11 @@ const Title = styled(Typography)(({ theme }) => ({
 
 const Description = styled(Typography)(({ theme }) => ({
   color: 'white',
-  textAlign: 'center' ,
+  
   Typography: theme.spacing(1),
   [theme.breakpoints.up('xs')]: {
     backgroundColor: yellow[500],
-    fontSize: 14,
+    fontSize: 16,
     
   },
   [theme.breakpoints.up('sm')]: {

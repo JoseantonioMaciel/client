@@ -32,12 +32,12 @@ const H1 = styled('Typography')(({ theme }) => ({
   Typography: theme.spacing(1),
   [theme.breakpoints.up('xs')]: {
     backgroundColor: yellow[500],
-    fontSize: 24,
+    fontSize: 34,
     
   },
   [theme.breakpoints.up('sm')]: {
     backgroundColor: pink[500],
-    fontSize: 34,
+    fontSize: 48,
   },
   [theme.breakpoints.up('md')]: {
     backgroundColor: red[500],
@@ -59,12 +59,12 @@ const H2 = styled('Typography')(({ theme }) => ({
   Typography: theme.spacing(1),
   [theme.breakpoints.up('xs')]: {
     backgroundColor: yellow[500],
-    fontSize: 14,
+    fontSize: 16,
     
   },
   [theme.breakpoints.up('sm')]: {
     backgroundColor: pink[500],
-    fontSize: 16,
+    fontSize: 20,
   },
   [theme.breakpoints.up('md')]: {
     backgroundColor: red[500],
