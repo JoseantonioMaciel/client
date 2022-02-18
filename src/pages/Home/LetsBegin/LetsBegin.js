@@ -122,9 +122,23 @@ export default function AddressForm() {
             required
             id="zip"
             name="zip"
-            label="Zip / Postal code"
+            label="Postal Code"
             fullWidth
             autoComplete="shipping postal-code"
+            variant="standard"
+            inputProps={{style: {fontSize: 20}}} // font size of input text
+             InputLabelProps={{style: {fontSize: 20}}} // font size of input label
+          />
+        </Grid>
+        <Grid item  xs={12}>
+          <TextField
+            required
+            id="Message"
+            name="Message"
+            label="Message"
+            fullWidth
+            multiline
+            maxRows={6}
             variant="standard"
             inputProps={{style: {fontSize: 20}}} // font size of input text
              InputLabelProps={{style: {fontSize: 20}}} // font size of input label
