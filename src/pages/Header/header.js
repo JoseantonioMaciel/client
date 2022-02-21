@@ -34,7 +34,6 @@ const ResponsiveAppBar = () => {
     return (
       <AppBar position="static" sx={{ bgcolor: "#003478" }}> 
         <Toolbar >
-        
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"

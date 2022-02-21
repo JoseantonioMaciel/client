@@ -8,7 +8,10 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Contactpage from "./pages/Contact/Contactus"
 import Gallerypage from "./pages/Gallery/Gallery"
-
+import Logo from "./assets/Images/Logo.png"
+import { makeStyles } from "@mui/styles";
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 
 import ADUPAGE from './pages/Business/ServicesPages/ADU';
 import ASBUILTPAGE from './pages/Business/ServicesPages/ASBUILT';
@@ -19,6 +22,14 @@ import PERMITSERVICESPAGE from './pages/Business/ServicesPages/PERMITSERVICES';
 import ADREPAIRUPAGE from './pages/Business/ServicesPages/REPAIR';
 import ROOMADITIONPAGE from './pages/Business/ServicesPages/ROOMADITION';
 import TENANTIMPROVEMENTPAGE from './pages/Business/ServicesPages/TENANTIMPROVEMENT';
+
+
+const useStyles = makeStyles({
+  logo: {
+    maxWidth: 200,
+  },
+});
+const pages = ['Home', 'Services', 'Gallery', 'About UDS', 'Contact Us'];
 
 export default function App() {
   
@@ -49,6 +60,16 @@ export default function App() {
 }
 
 function Layout() {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+    
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+  const classes = useStyles();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -59,13 +80,51 @@ function Layout() {
   };
   return (
     <Box sx={{ flexGrow: 1 }}> 
-      <AppBar position="static">
+      <AppBar  position="static" sx={{ bgcolor: "#003478" }}>
       <Toolbar>
+        {/** This is the Mobile Version Box*/}
+      <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
       <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          logo
+      <img src={Logo} alt="Logo" className={classes.logo} />
       </Typography>
+       {/** This is the Full website Navigation Bar  */}
+      <Box  sx={{ display: { xs: 'none', md: 'flex' } }} >
       <Button color="inherit" href="/">Home</Button>
-      
       {/** SERVICE BUTTON  */}
       <Button
       color="inherit"
@@ -75,7 +134,7 @@ function Layout() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Dashboard
+        SERVICES
       </Button>
        {/** SERVICE BUTTON END */}
       {/** SERVICE MENU  */}
@@ -120,6 +179,7 @@ function Layout() {
       <Button color="inherit" href="/gallery">Gallery</Button>
       <Button color="inherit" href="/about">About UDS</Button> 
       <Button color="inherit" href="/contact">Contact US</Button>
+      </Box>
       </Toolbar>
       </AppBar>
       <Outlet />
