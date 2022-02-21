@@ -109,10 +109,7 @@ return (
                         Ultimate Drafting Services
                     </H2>
                 </Grid>
-                
-                
             </Grow>
-            
           </Grid>
       </Container>
     </Paper>
